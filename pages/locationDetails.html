@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/details.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <title>Rick and Morty</title>
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+</head>
+
+<body >
+  <header>
+    <img src="../img/header/logo.svg" alt="" class="header__img">
+    <div class="header__container">
+      <a href="../index.html" class="header__element">Characters</a>
+      <a href="./locations.html" class="header__element">Locations</a>
+      <a href="./episodes.html" class="header__element">Episodes</a>
+    </div>
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../locationDetails.js"></script>
+  <main class="location__main">
+    <div onclick="history.back()" class="main__back-button">
+      <img src="../img/characterDetails/arrow_back_24px.svg" alt="">
+      <p class="main__back-text">Go back</p>
+    </div>
+    <div class="main__top-container location__top-container" id="top"></div>
+    <div class="main__bottom-container characters__container" id="bottom"></div>
+  </main>
+  <footer>
+    <div class="footer__text">Make with ❤️ for the MobProgramming team</div>
+  </footer>
+</body>
+
+</html>

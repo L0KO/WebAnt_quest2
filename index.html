@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Rick and Morty</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" />
+</head>
+
+<body>
+  <header>
+    <img src="./img/header/logo.svg" alt="" class="header__img">
+    <div class="header__container">
+      <a href="./index.html" class="header__element">Characters</a>
+      <a href="./pages/locations.html" class="header__element">Locations</a>
+      <a href="./pages/episodes.html" class="header__element">Episodes</a>
+    </div>
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+  <main>
+    <section class="filters">
+      <img src="./img/filters/name.svg" alt="" class="filters__img">
+      <div class="filters__conteiner">
+        <input type="text" class="filters__filters filters__filter-input" placeholder="Filter by name..." id="filterName" value="" onchange="filter()">
+        <select name="" id="" class="filters__filters filters__filter-select">
+          <option value="" hidden>Species</option>
+          <option value="">Smth 1</option>
+          <option value="">Smth 2</option>
+          <option value="">Smth 3</option>
+        </select>
+        <select name="" id="" class="filters__filters filters__filter-select">
+          <option value="" hidden>Gender</option>
+          <option value="">Smth 1</option>
+          <option value="">Smth 2</option>
+          <option value="">Smth 3</option>
+        </select>
+        <select name="" id="" class="filters__filters filters__filter-select">
+          <option value="" hidden>Status</option>
+          <option value="">Smth 1</option>
+          <option value="">Smth 2</option>
+          <option value="">Smth 3</option>
+        </select>
+      </div>
+    </section>
+    <section class="characters">
+      <div class="characters__container" id="res">
+        
+      </div>
+      <div class="characters__button">Load more</div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer__text">Make with ❤️ for the MobProgramming team</div>
+  </footer>
+
+</body>
+
+</html>
