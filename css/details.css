@@ -170,6 +170,57 @@ main {
   text-align: left;
 }
 
-.location__main{
+.location__main {
   padding: 0 210px;
+}
+
+@media screen and (max-width: 1160px) {
+  .main__back-button {
+    left: 24px;
+    top: 24px;
+  }
+
+  .location__main {
+    padding: 0 24px;
+  }
+
+  .location__top-container {
+    padding-top: 64px;
+  }
+
+  .main__bottom-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .characters__container {
+    flex-direction: row;
+  }
+
+  header {
+    padding: 6px 24px;
+  }
+
+  footer {
+    padding: 20px 24px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main__top-container img {
+    width: 50%;
+    margin-top: 60px;
+  }
+
+  .main__info-li {
+    width: 312px;
+  }
+
+  .main__info-episodes-li {
+    width: 312px;
+  }
+
+  .main-location__top-row-container{
+    gap: 100px;
+  }
 }

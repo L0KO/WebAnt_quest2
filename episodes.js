@@ -3,15 +3,12 @@ let store
 axios.get('https://rickandmortyapi.com/api/episode')
   .then(res => store = res)
   .then(res => showOutput(res))
-// .then(data => console.log(data))
 
 document.addEventListener("click", function (e) {
   if (e.target.className == "characters__button") {
-    // alert(`${store}`);
     axios.get(`${store.data.info.next}`)
       .then(res => store = res)
       .then(res => showOutput(res))
-    // .then(data => console.log(data))
   }
 });
 
@@ -46,4 +43,25 @@ function filter() {
   axios.get(`https://rickandmortyapi.com/api/episode/?name=${data}`)
     .then(res => store = res)
     .then(res => showOutput(res, "reset"))
+}
+
+function dropList() {
+  let x = document.getElementById("header__popup");
+  let y = document.getElementById("body");
+
+  if (x.className === "header__popup") {
+    x.className += " responsive";
+    y.className += " responsive";
+    x.innerHTML = `
+    <ol class="header__popup-ol">
+      <li class="header__popup-li"><a href="../index.html" class="header__element">Characters</a></li>
+      <li class="header__popup-li"><a href="./locations.html" class="header__element">Locations</a></li>
+      <li class="header__popup-li"><a href="./episodes.html" class="header__element">Episodes</a></li>
+    </ol>
+    `
+  } else {
+    x.className = "header__popup"
+    y.className = "body"
+    x.innerHTML = ``
+  }
 }
